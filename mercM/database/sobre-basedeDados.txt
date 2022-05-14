@@ -1,0 +1,9 @@
+o file mercado e a base de dados antiga provavelmente ira funcionar sem erros;
+e o file mercado(1) e a base de dados mais actualizada , com novos atributos que nao 
+contam na primeira base de dados,pode acontecer de dar erro .
+
+
+************************************************************************************************************************
+*       aconselho a instalar a base de dados mercado(1)  caso de erro pode eliminar e instalar a base de dados mercado *
+*                                                                                                                      *
+************************************************************************************************************************

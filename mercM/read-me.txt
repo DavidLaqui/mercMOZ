@@ -1,0 +1,11 @@
+este e o trabalho do David Basilio Laqui codigo 171148642 Estudante da UDM
+este ficheiro contem alguns dados uteis para usar o sistema ... o sistema contem 
+7 pastas ....
+O sistema contera 3 tipos de usuarios 
+*******************************************************************************************************************************
+* 1- cliente: esse nao precisa de login apenas visita a pagina e vem os produtos disponiveis  e liga se estiver  interessado; *
+* 2-Admin: user: Admin senha: 1234554321                                                                                      *
+* 3- vendedor: este sera cadastrado pelo administrador                                                                        *
+*******************************************************************************************************************************
+
+- muito obrigado pela atencao dispencada ...

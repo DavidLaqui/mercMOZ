@@ -1,0 +1,93 @@
+/* SMALL DEVICES - TABLETS*/
+@media screen and (min-width: 768px) {
+.servico {width: 49%; float: left; margin-right: 2%;}
+.servico:nth-child(2){margin-right: 0;}
+.newsletter h2 {font-size: 2em;}
+.newsletter h3 {font-size: 1.5em;}
+.newsletter input {width: 70%; padding: 2%; float: left; margin-right: 1%;}
+.newsletter button {width: 29%; padding: 2%; float: right; margin-top: 0;}
+}
+/* MEDIUM DEVICES - TABLETS & DESKTOPS*/
+@media screen and (min-width: 960px) {
+.title {width: 70%; float: left; text-align: left;}
+.title h2 {font-size: 3em;}
+.title h3 {font-size: 2em;}
+.buttons {width: 30%; float: right; margin-top: 0; }
+.servico {width: 32%; height: 400px; }
+.servico:nth-child(2){margin-right: 2%;}
+.servico:nth-child(3){margin-right: 0;}
+.newsletter input {width: 60%; float: none;}
+.newsletter button {width: 20%; float: none;}
+}
+
+
+.cont .box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #000;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.cont .box .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right,#ce2e3c,#da6709);
+	transition: 0.5s;
+	z-index: 1;
+}
+.cont .box:hover .icon {
+	top: 20px;
+	left:  calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	text-align: center;
+}
+.cont .box .icon img.fa{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%, -50%);
+	font-size: 80px;
+	transform: 0.5s;
+	color: #fff;
+	}
+.cont .box:hover .icon img.fa{
+	font-size: 40px;
+
+}
+.cont .box .content{
+	position: absolute;
+	top: 100%;
+	height: calc(100% - 100px);
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	opacity: 0;
+}
+.cont .box:hover .content{
+	top: 100px;
+	opacity: 1;
+	}
+.cont .box .content h3 {
+	margin: 0 0 10px;
+	padding:0;
+	color: #fff;
+	font-size: 24px;
+
+}
+.cont .box .content p {
+	margin: 0;
+	padding:0;
+	color: #fff;
+	font-size: 24px;
+	
+}

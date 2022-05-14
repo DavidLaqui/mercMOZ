@@ -1,0 +1,90 @@
+.centralizar{
+	position: relative;
+}
+.virar{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.carta{ 
+	cursor: pointer;
+	width: 400px;
+	height: 440px;
+	
+}
+.frente,.traz{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .6s linear;
+
+}
+.frente img {
+	height: 100%;
+}
+.frente{
+	transform: perspective(600px) rotateY(0deg);
+}
+.traz{
+	background: #f1f1f1;
+	transform: perspective(600px) rotateY(180deg);
+}
+.traz-content{
+	color: #2c3e50;
+	text-align: center;
+	width: 100%;
+}
+.sm{
+	margin: 10px 0; 
+}
+.sm a{
+	display: inline-flex;
+	width: 30px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s
+    margin: 50px;
+}
+.sm a:hover{
+	color: white;
+
+
+}
+.sm img{
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+
+	
+}
+.sm img:hover{
+	border-radius: 50%;
+}
+#facebook{
+    background-color: #2372a3;
+}
+#instagram{
+    background-color: #3f729b;
+}
+#plus{
+    background-color: #dd4b39;
+}
+#snap{
+    background-color: #fc0;
+}
+#twitter{
+    background-color: #0084b4;
+}
+#youtube{
+    background-color: #b00;
+}
+.carta:hover > .frente{
+	transform: perspective(600px) rotateY(-180deg);
+}
+.carta:hover > .traz{
+	transform: perspective(600px) rotateY(0deg);
+}

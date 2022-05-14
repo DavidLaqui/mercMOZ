@@ -1,0 +1,120 @@
+<?php
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$database = "infCentral";
+
+if(isset($_POST["submit_file"])){
+$selected_username = $_COOKIE["user_first_name"];
+$users_last_name = $_COOKIE["users_last_name"];
+move_uploaded_file($_FILES["file"]["tmp_name"],"../Profile_Pictures/".$_FILES["file"]["name"]);
+$connection_String = mysqli_connect($host,$user,$pass,$database);
+$myfiles = $_FILES["file"]["name"];
+$update_profile_query = "UPDATE tb_usuarios SET Profile_Picture = '$myfiles' WHERE user_fname = '$selected_username'AND user_lname ='$users_last_name' ";
+$execute_update_profile_query = mysqli_query($connection_String,$update_profile_query);
+
+}
+
+ ?>
+<!--<!DOCTYPE html>-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- Importando o  bootstrap 3.0 e css -->
+
+     <title>Criar grupo Chat</title>
+
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap/style3.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap/uploadify.css">
+    <link href="../css/bootstrap/general_share.css" rel="stylesheet"/>
+
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.knob.js"></script>
+    <script src="../js/jquery.ui.widget.js"></script>
+    <script src="../js/jquery.iframe-transport.js"></script>
+    <script src="../js/jquery.fileupload.js"></script>
+    
+    <!-- Our main JS file -->
+    <script src="../js/script.js"></script>
+
+
+</head>
+
+<body>
+
+
+<span style="color:white; margin-top:3px"><em>Bem-vindo,&nbsp;</em></span>
+<span style="margin-top:3px"><strong><?php echo ($_COOKIE["user_first_name"]); ?></strong></span>
+</div>
+</div>
+
+<!-- fim da parte superior -->
+
+
+
+   
+    
+      
+      <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+      <div id="drop">
+      Selecionar
+
+      <a>procurar</a>
+      <input type="file" name="upl" multiple />
+      </div>
+
+      <ul>
+        <!-- o ficheiro carregar vai mostrar a que -->
+      </ul>
+
+    </form>
+
+        
+        
+
+
+  
+
+
+
+
+    <script>
+
+    $(document).ready(function(){
+
+      $("#my_profile_picture").load("foto_perfil.php");
+
+      $(" #my_profile_picture").click(function(){
+      $('#file').trigger("click");
+      });
+
+      $("#file").change(function(){
+        $("#submit_file").trigger("click");
+      });
+
+      $("#submit_file").click(function(){
+          $(this).submit();
+      });
+
+    });
+
+    setInterval(function(){
+     $(".uploaded_container").load("carregar.php");
+   },2000);
+
+
+    </script>
+
+    <script type="text/javascript">
+    function Logout(){
+    $.get("../Logout/Logout.php");
+    }
+ </script>
+
+  </body>
+  </html>
